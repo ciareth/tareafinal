@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convertidor de Monedas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Convertidor de Monedas</h1>
+  
+  <!-- Contenedor principal -->
+  <div class="container">
+
+    <!-- Primer selector de moneda e ingreso de cantidad -->
+    <div class="currency" id="c1">
+      <!-- Selector para la primera moneda -->
+      <select id="currency-one">
+        <option value="AED">AED - Dirham (Emiratos Árabes Unidos)</option>
+        <option value="ARS">ARS - Peso (Argentina)</option>
+        <option value="AUD">AUD - Dólar (Australia)</option>
+        <option value="BRL">BRL - Real (Brasil)</option>
+        <option value="CAD">CAD - Dólar (Canadá)</option>
+        <option value="CHF">CHF - Franco (Suiza)</option>
+        <option value="CLP">CLP - Peso (Chile)</option>
+        <option value="CNY">CNY - Yuan (China)</option>
+        <option value="COP">COP - Peso (Colombia)</option>
+        <option value="DKK">DKK - Corona (Dinamarca)</option>
+        <option value="EGP">EGP - Libra (Egipto)</option>
+        <option value="EUR">EUR - Euro (Unión Europea)</option>
+        <option value="GBP">GBP - Libra (Reino Unido)</option>
+        <option value="GTQ">GTQ - Quetzal (Guatemala)</option>
+        <option value="HKD">HKD - Dólar (Hong Kong)</option>
+        <option value="HNL">HNL - Lempira (Honduras)</option>
+        <option value="HRK">HRK - Kuna (Croacia)</option>
+        <option value="ILS">ILS - Nuevo shekel (Israel)</option>
+        <option value="INR">INR - Rupia (India)</option>
+        <option value="JPY">JPY - Yen (Japón)</option>
+        <option value="KRW">KRW - Won (Corea del Sur)</option>
+        <option value="MXN">MXN - Peso (México)</option>
+        <option value="NOK">NOK - Corona (Noruega)</option>
+        <option value="PAB">PAB - Balboa (Panamá)</option>
+        <option value="PEN">PEN - Sol (Perú)</option>
+        <option value="PHP">PHP - Peso (Filipinas)</option>
+        <option value="PYG">PYG - Guaraní (Paraguay)</option>
+        <option value="RUB">RUB - Rublo (Rusia)</option>
+        <option value="SAR">SAR - Riyal (Arabia Saudita)</option>
+        <option value="SEK">SEK - Corona (Suecia)</option>
+        <option value="SGD">SGD - Dólar (Singapur)</option>
+        <option value="THB">THB - Baht (Tailandia)</option>
+        <option value="TRY">TRY - Lira (Turquía)</option>
+        <option value="TWD">TWD - Nuevo dólar (Taiwán)</option>
+        <option value="UAH">UAH - Grivna (Ucrania)</option>
+        <option value="USD" selected>USD - Dólar (Estados Unidos)</option>
+        <option value="UYU">UYU - Peso (Uruguay)</option>
+        <option value="VND">VND - Dong (Vietnam)</option>
+      </select>      
+      <!-- Campo de entrada para la cantidad de la primera moneda -->
+      <input type="number" id="amount-one" placeholder="0" value="1">
+    </div>
+
+    <!-- Contenedor para el botón de intercambio y la tasa de cambio -->
+    <div class="swap-rate-container">
+      <!-- Botón para intercambiar las monedas seleccionadas -->
+      <button class="btn" id="swap">Intercambiar</button>
+      <!-- Contenedor donde se mostrará la tasa de cambio actual -->
+      <div class="rate" id="rate"></div>
+    </div>
+
+    <!-- Segundo selector de moneda e ingreso de cantidad -->
+    <div class="currency" id="c2">
+      <!-- Selector para la segunda moneda -->
+      <select id="currency-two">
+        <option value="AED">AED - Dirham (Emiratos Árabes Unidos)</option>
+        <option value="ARS">ARS - Peso (Argentina)</option>
+        <option value="AUD">AUD - Dólar (Australia)</option>
+        <option value="BRL">BRL - Real (Brasil)</option>
+        <option value="CAD">CAD - Dólar (Canadá)</option>
+        <option value="CHF">CHF - Franco (Suiza)</option>
+        <option value="CLP">CLP - Peso (Chile)</option>
+        <option value="CNY">CNY - Yuan (China)</option>
+        <option value="COP">COP - Peso (Colombia)</option>
+        <option value="DKK">DKK - Corona (Dinamarca)</option>
+        <option value="EGP">EGP - Libra (Egipto)</option>
+        <option value="EUR">EUR - Euro (Unión Europea)</option>
+        <option value="GBP">GBP - Libra (Reino Unido)</option>
+        <option value="GTQ">GTQ - Quetzal (Guatemala)</option>
+        <option value="HKD">HKD - Dólar (Hong Kong)</option>
+        <option value="HNL" selected>HNL - Lempira (Honduras)</option>
+        <option value="HRK">HRK - Kuna (Croacia)</option>
+        <option value="ILS">ILS - Nuevo shekel (Israel)</option>
+        <option value="INR">INR - Rupia (India)</option>
+        <option value="JPY">JPY - Yen (Japón)</option>
+        <option value="KRW">KRW - Won (Corea del Sur)</option>
+        <option value="MXN">MXN - Peso (México)</option>
+        <option value="NOK">NOK - Corona (Noruega)</option>
+        <option value="PAB">PAB - Balboa (Panamá)</option>
+        <option value="PEN">PEN - Sol (Perú)</option>
+        <option value="PHP">PHP - Peso (Filipinas)</option>
+        <option value="PYG">PYG - Guaraní (Paraguay)</option>
+        <option value="RUB">RUB - Rublo (Rusia)</option>
+        <option value="SAR">SAR - Riyal (Arabia Saudita)</option>
+        <option value="SEK">SEK - Corona (Suecia)</option>
+        <option value="SGD">SGD - Dólar (Singapur)</option>
+        <option value="THB">THB - Baht (Tailandia)</option>
+        <option value="TRY">TRY - Lira (Turquía)</option>
+        <option value="TWD">TWD - Nuevo dólar (Taiwán)</option>
+        <option value="UAH">UAH - Grivna (Ucrania)</option>
+        <option value="USD">USD - Dólar (Estados Unidos)</option>
+        <option value="UYU">UYU - Peso (Uruguay)</option>
+        <option value="VND">VND - Dong (Vietnam)</option>
+      </select>      
+      <!-- Campo de entrada para la cantidad de la segunda moneda -->
+      <input type="number" id="amount-two" placeholder="0">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
